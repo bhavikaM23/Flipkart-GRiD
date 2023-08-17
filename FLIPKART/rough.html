@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Search and Image</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 150px;
+            position: relative;
+            background: url(obg1.jpg) no-repeat;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        #searchBar {
+            display: block;
+            margin: 0 auto;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: bottom 0.5s ease;
+        }
+
+        #searchInput {
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        #searchButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #cd1dac;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #searchButton:hover {
+            background-color: #e622b8;
+        }
+
+        #resultImage {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="resultImage">
+            <img src="" alt="Result Image" id="imageToShow"  width="400" height="400">
+        </div>
+        <div id="searchBar">
+            <input type="text" id="searchInput" placeholder="How do you want your outfit...">
+            <button id="searchButton">Search</button>
+        </div>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const searchButton = document.getElementById('searchButton');
+        const resultImage = document.getElementById('resultImage');
+        const searchBar = document.getElementById('searchBar');
+        const imageToShow = document.getElementById('imageToShow');
+
+        searchButton.addEventListener('click', () => {
+            const searchTerm = searchInput.value.trim();
+            // Here you can replace this with actual image URL based on the search term
+            const imageUrl = `ottd.jpg`;
+            imageToShow.src = imageUrl;
+            resultImage.style.display = 'block';
+
+            // Move the search bar to the bottom
+            searchBar.style.bottom = '30px';
+        });
+    </script>
+</body>
+</html>

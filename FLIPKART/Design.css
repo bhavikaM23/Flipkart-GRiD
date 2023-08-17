@@ -1,0 +1,82 @@
+/* Reset some default styles for consistency */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500&display=swap');
+
+body, html {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the logo container */
+.logo-container {
+    display: flex;
+    justify-content: center; /* Align logo to the left */
+    align-items: center; /* Align logo to the top */
+    padding: 20px; /* Add padding to create a gap */
+    background-color: #111111; /* Optional: Add a background color */
+}
+/* Create a circular shape */
+.logo-container img {
+    width: 120px; /* Adjust the size of the logo */
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire circle */
+}
+
+.logo-container p {
+    font-size: 50px;
+    margin: 0;
+    font-style: "poppins";
+    color: white;
+    margin-top: 10px; /* Add some space between the logo and the name */
+}
+
+.section{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 80%;
+    margin: 2rem auto 0 auto;
+}
+.section img{
+    height: 200px;
+}
+.section h1{
+    margin: 0;
+    color: black;
+}
+.section .text{
+    flex: 1;
+    padding-right: 20px;
+}
+.section p{
+    font-style: sans-serif;
+    margin-right: 15px;
+}
+.centered-button {
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* Style the button */
+.centered-button a button {
+    padding: 10px 20px;
+    background-color: #f72d7a; /* Pink color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.centered-button a button:hover {
+    background-color: #ff5a8c; /* Lighter pink color on hover */
+}
